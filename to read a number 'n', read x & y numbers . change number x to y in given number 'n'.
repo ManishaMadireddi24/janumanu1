@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+
+class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        
+    int n,i,x,y,rem,a=0,rev=0,rem1;
+    n=sc.nextInt();
+    x=sc.nextInt();
+    y=sc.nextInt();
+    while(n!=0)
+    {
+        rem=n%10;
+        if(rem==x)
+        {
+            rem=y;
+        }
+        a=a*10+rem;
+        n=n/10;
+    }
+    while(a!=0)
+    {
+        rem1=a%10;
+        rev=rev*10+rem1;
+        a=a/10;
+    }
+    System.out.println(+rev);
+    
+}
+}
