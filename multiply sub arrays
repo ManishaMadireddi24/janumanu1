@@ -1,0 +1,32 @@
+import java.util.*;
+import java.io.*;
+class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n,i,p;
+        int a[],sum=0,sum1=0;
+        n=sc.nextInt();
+        a=new int[n];
+        System.out.print("Enter array elements:");
+        for(i=0;i<n;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        int d=n/2;
+        for(i=0;i<d;i++)
+        {
+            sum=sum+a[i];
+        }
+        System.out.println("sum of 1st sub array:"+sum);
+        for(i=d;i<n;i++)
+        {
+            sum1=sum1+a[i];
+        }
+        System.out.println("sum of 2nd sub array:"+sum1);
+        p=sum*sum1;
+        System.out.println("Product of sums:"+p);
+    }
+}
+
